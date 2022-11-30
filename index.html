@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style.css">
-    <title>Document</title>
-  </head>
-  <body>
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
     <main>
-      <header>Weather Dashboard</header>
-      <section class="container">
-        <div class="row">
-            <aside class="col m3">
-                <div class="card">
-                    <div class="card-content">
-                        <form id="searchForm">
-                            <input type="text" id="search" name="search" />
-                            <button type="submit">Search</button>
-                          </form>
-                    </div>
+        <header class="jumbotron text-center bg-primary">
+            <h1 class="text-weight-bold text-white ">Weather Dashboard </h1>
+            <div id="titleContainer">
+                <i class="bi bi-brightness-high text-white"></i>
+                <p class="lead text-white">A weather app</p>
+                <i class="bi bi-cloud-drizzle text-white"></i>
+            </div>
+            <p id="currentDay" class="lead text-white"></p>
+        </header>
+        <div class="row justify-content-center">
+            <div class="col-9 col-sm-6 col-lg-4 ">
+                <div class="input-group">
+                    <input class="form-control text-center" type="text" id="enterCity"
+                        placeholder="Type City and Click Enter">
+                    <button type="button" id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
                 </div>
-                <div id="history"></div>
-            </aside>
-            <section class="col m4">
-                <div id="today" class="card"></div>
-            </section>
-            <section class="col m5">
-                <div id="forecast"></div>
-            </section>
+            </div>
+            <div>
+                <button class="btn col-4 btn-primary pb-3 pt-3" type="button" id="newSearch">Start Over</button>
+            </div>
+            <p class="pt-3 d-none" id="lastSearchedTitle">Last Searched:</p>
+            <form class="col-6 col-sm-4 col-lg-2" id="searchedLast"></form>
         </div>
-    </section>
+        </div>
+        </div>
     </main>
     <script src="./assets/script.js"></script>
-  </body>
+</body>
+
 </html>

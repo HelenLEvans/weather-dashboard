@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    height: 85px;
+    height: 160px;
     background-color: var(--navy);
     color: var(--white);
     margin: 0;
