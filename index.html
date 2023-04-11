@@ -5,39 +5,57 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
     <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dashboard</title>
 </head>
 
 <body>
     <main>
-        <header class="jumbotron text-center bg-primary">
+        <header class="jumbotron jumbotron-fluid text-center bg-primary">
             <h1 class="text-weight-bold text-white ">Weather Dashboard </h1>
-            <div id="titleContainer">
-                <i class="bi bi-brightness-high text-white"></i>
-                <p class="lead text-white">A weather app</p>
-                <i class="bi bi-cloud-drizzle text-white"></i>
-            </div>
             <p id="currentDay" class="lead text-white"></p>
         </header>
-        <div class="row justify-content-center">
-            <div class="col-9 col-sm-6 col-lg-4 ">
-                <div class="input-group">
-                    <input class="form-control text-center" type="text" id="enterCity"
-                        placeholder="Type City and Click Enter">
-                    <button type="button" id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-3">
+                    <h3>Search for a City:</h3>
+                    <!-- GIVEN a weather dashboard with form inputs -->
+                    <form id="city-selection-form">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="entered-city-name" placeholder="Enter city here">
+                        </div>
+                        <button type="submit" id="submit-button" class="btn btn-primary col-12">Search</button>
+                        <div class="btn-group-vertical col-12 p-2" id="history" role="group" aria-label="Basic example">
+                            <!-- this is where our user's previous searches go. -->
+                        </div>
+                      </form>
+                </div>
+                
+                <div class="col-9">
+                    <!-- section where our current weather goes -->
+                    <!-- reminder: needs fields for city, date, temp, wind, humidity, and an icon for weather. -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 border border-primary m-2 text-white bg-dark" id="current-weather">
+                            <h3></h3>
+                            <img src="" alt="">
+                            <p></p>
+                            <p></p>
+                            <p></p>
+                        </div>
+    
+                    <!-- section where our 5-day forecast goes -->
+                    <!-- reminder: we want a title (5-day forecast), with each tile showing date, temp, wind, humidity, and an icon. -->
+                    <div class="row justify-content-center" id="5day">
+                    </div>
                 </div>
             </div>
-            <div>
-                <button class="btn col-4 btn-primary pb-3 pt-3" type="button" id="newSearch">Start Over</button>
-            </div>
-            <p class="pt-3 d-none" id="lastSearchedTitle">Last Searched:</p>
-            <form class="col-6 col-sm-4 col-lg-2" id="searchedLast"></form>
-        </div>
-        </div>
         </div>
     </main>
     <script src="./assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
