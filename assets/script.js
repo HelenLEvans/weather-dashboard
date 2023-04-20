@@ -18,7 +18,7 @@ $(function () {
   let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
   //API - 60 calls per minute max
-  const APIKEY = "9e19c11c5ae2513b934cad2837eb6265";
+  const APIKEY = "801b686e1b9b0d5c79cf79f9c54b7506";
 
   function displayTimeTop() {
     $("#currentDay").text(dayjs().format("dddd - MMMM D, YYYY hh:mm:ss A"));

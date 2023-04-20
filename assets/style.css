@@ -1,22 +1,5 @@
-:root {
-    --navy: #000080;
-    --cornflower: #6495ed;
-    --white: #ffffff
-}
-
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-header {
-    height: 160px;
-    background-color: var(--navy);
-    color: var(--white);
-    margin: 0;
-    width: 100%;
-    font-size: 3rem;
-    display: flex;
-    justify-content: space-between;
-}
+#titleContainer {
+    display: inline-flex;
+  }
 
 
